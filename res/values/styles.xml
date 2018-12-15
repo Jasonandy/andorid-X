@@ -1,0 +1,11 @@
+<resources>
+
+    <!--  AppBaseTheme 基本的主题风格-->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+    <!-- AppTheme app的主题  -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+</resources>
