@@ -12,15 +12,25 @@ package cn.ucaner;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
 * @Package：cn.ucaner   
 * @ClassName：MainActivity   
-* @Description：   <p> MainActivity </p>
+* @Description：   <p> MainActivity 
+* 创建activity的要点
+* 	1.一个就是一个类 
+* 	2.需要继承Activity
+* 	3.需要复习oncreate() 第一次运行时会调用方法
+* 	4.Activity是个组件 所以需要注册到 manifest清单
+* 	5.需要给这个添加一下 "控件" 
+* </p>
 * @Author： - Jason   
 * @CreatTime：2018年12月14日 下午4:14:44   
 * @Modify By：   
@@ -69,19 +79,28 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main); //activity_main 设置布局文件
+		 
+		//得到一个“控件”
+		TextView myTextView = (TextView)findViewById(R.id.mytextView);
+		Button myBtn = findViewById(R.id.myBtn);
+		
+		//myTextView.setText("You are what you want to be .");
+		//myBtn.setText("Click");
+		
 		
 		/**
-		 * 查看按钮的点击事件
+		 * 点击btn作出相应的处理
 		 */
-      /*  viewButton.setOnClickListener(new Button.OnClickListener(){
+		myBtn.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View view){
                 //生成一个Intent对象 
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this,TestActivity.class);
                 MainActivity.this.startActivity(intent); //启动Activity
             }
-        });*/
+        });
+		
 	}
 	
 

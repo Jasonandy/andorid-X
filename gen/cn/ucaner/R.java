@@ -32,8 +32,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_example=0x7f090001;
-        public static final int action_settings=0x7f090000;
+        public static final int action_example=0x7f090004;
+        public static final int action_settings=0x7f090003;
+        public static final int myBtn=0x7f090001;
+        public static final int mytextView=0x7f090000;
+        public static final int test_my_view=0x7f090002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -49,25 +52,26 @@ public final class R {
         /**  about 
          */
         public static final int aboutText=0x7f060003;
-        public static final int action_example=0x7f06000f;
+        public static final int action_example=0x7f060010;
         /**  action_settings 
          */
         public static final int action_settings=0x7f060002;
         /**  app name 
          */
         public static final int app_name=0x7f060000;
-        public static final int down=0x7f060005;
-        public static final int left=0x7f060006;
-        public static final int navigation_drawer_close=0x7f06000e;
-        public static final int navigation_drawer_open=0x7f06000d;
-        public static final int right=0x7f060007;
-        public static final int space=0x7f060008;
-        public static final int title_activity_test=0x7f060010;
-        public static final int title_activity_view=0x7f060009;
-        public static final int title_section1=0x7f06000a;
-        public static final int title_section2=0x7f06000b;
-        public static final int title_section3=0x7f06000c;
-        public static final int up=0x7f060004;
+        public static final int btn_click=0x7f060004;
+        public static final int down=0x7f060006;
+        public static final int left=0x7f060007;
+        public static final int navigation_drawer_close=0x7f06000f;
+        public static final int navigation_drawer_open=0x7f06000e;
+        public static final int right=0x7f060008;
+        public static final int space=0x7f060009;
+        public static final int title_activity_test=0x7f060011;
+        public static final int title_activity_view=0x7f06000a;
+        public static final int title_section1=0x7f06000b;
+        public static final int title_section2=0x7f06000c;
+        public static final int title_section3=0x7f06000d;
+        public static final int up=0x7f060005;
         /**  You are what you want to be. 
          */
         public static final int yr_wt=0x7f060001;

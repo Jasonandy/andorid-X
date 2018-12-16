@@ -9,7 +9,11 @@
     tools:context="cn.ucaner.TestActivity" >
 
     <TextView
+        android:id="@+id/test_my_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/aboutText" />
+     />
+    <!--
+		 android:text="@string/aboutText"
+	 -->
 </RelativeLayout>

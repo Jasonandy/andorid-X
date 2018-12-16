@@ -14,6 +14,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 /**
 * @Package：cn.ucaner   
@@ -32,6 +34,14 @@ public class TestActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test);
+		TextView textView = (TextView)findViewById(R.id.test_my_view);
+		
+		textView.setText("\r\n" + 
+				"	        项目简介：一个佛系的高中物理老师的App\\n\r\n" + 
+				"	        项目地址：https://github.com/Jasonandy \\n\r\n" + 
+				"	        作       者：佛系小吴\\n"
+		);
+		
 	}
 
 	@Override

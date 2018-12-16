@@ -7,12 +7,27 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
+    <!--  RelativeLayout 布局上的描述 -->
 
-    <!-- 内容 -->
+    <!-- 内容  布局文件 一个activity对应一个控件 一般来说   文本控件 
+   	 wrap_content
+    
+    -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/mytextView"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/aboutText" 
+    />
+    
+    <!-- 按钮 -->
+    <Button 
+        android:id="@+id/myBtn"
+        android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
-        android:text="@string/aboutText"
-         />
+        android:text="@string/btn_click" 
+    />
+    
+    
 
 </RelativeLayout>
