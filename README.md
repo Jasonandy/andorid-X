@@ -27,7 +27,8 @@
 	Andorid-X 这个项目是基于Eclipse+ADT搭建的Andorid开发环境
 		1.旨在通过演示学习Andorid的开发，为树莓派提供上位机app
 		2.后期想结合小程序or Vue来开发app 
-			参考: [佛系小吴]https://gitee.com/ucanner/xaiowu 。
+			参考: [佛系小吴]https://gitee.com/ucanner/xaiowu
+
 
 > 模拟器模拟
 
@@ -55,6 +56,7 @@
 ## 四、读书笔记
 
 * 1.《第一行代码》 - 郭霖 -第二版
+
 
 
 

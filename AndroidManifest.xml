@@ -33,7 +33,7 @@
     <!-- 修改蓝牙的设置 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
 
 
-    <!-- 用户的sdk相关参数 -->
+    <!-- 用户的sdk相关参数  sdk版本 -->
     <uses-sdk
         android:minSdkVersion="23"
         android:targetSdkVersion="23" />
@@ -43,16 +43,15 @@
         android:banner="@menu/main"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher"
         android:theme="@style/AppTheme" >
 
         <!-- MainActivity 主要页面 -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+            <!-- 将启动类传递过去 设置这里的话 加载启动也就是当前所在的activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,9 +61,17 @@
             android:name=".TestActivity"
             android:label="@string/title_activity_test" >
         </activity>
+        
+        <!-- 短信相关测试的activity -->
         <activity
             android:name=".SmsActivity"
-            android:label="@string/title_activity_sms" >
+            android:label="@string/app_name" >
+        </activity>
+        
+        <!-- profile activity -->
+        <activity
+            android:name=".fun.ProfileActivity"
+            android:label="@string/app_name" >
         </activity>
     </application>
 

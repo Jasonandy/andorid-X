@@ -69,6 +69,17 @@ public class MainActivity extends Activity {
      */
     //private Button netSetting = null;
     
+	/**
+	 * 测试按钮
+	 */
+	//private Button myBtn = null;
+	
+	
+	/**
+	 * 发送sms按钮
+	 */
+	private Button toSendBtn = null;
+	
     
 
 	/**
@@ -80,20 +91,20 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main); //activity_main 设置布局文件
 		 
 		//得到一个“控件”
-		//TextView myTextView = (TextView)findViewById(R.id.mytextView);
-		Button myBtn = findViewById(R.id.myBtn);
-		
-		//myTextView.setText("You are what you want to be .");
+//		TextView myTextView = (TextView)findViewById(R.id.mytextView);
+//		myBtn = findViewById(R.id.myBtn);
+//		
+//		myTextView.setText("You are what you want to be .");
 		//myBtn.setText("Click");
 		
 		
 		/**
 		 * 点击btn作出相应的处理 - setOnClickListener
 		 */
-		myBtn.setOnClickListener(new Button.OnClickListener(){
-            public void onClick(View view){
-                //生成一个Intent对象 
-                Intent intent = new Intent();
+//		myBtn.setOnClickListener(new Button.OnClickListener(){
+//            public void onClick(View view){
+//                //生成一个Intent对象 
+//                Intent intent = new Intent();
                 /**
                  * http://www.cnblogs.com/engine1984/p/4146621.html
                  * 
@@ -131,9 +142,24 @@ public class MainActivity extends Activity {
                  * 2.Context是一个类，Activity是Context类的子类，也就是说，所有的Activity对象，都可以向上转型为Context对象
                  * setClass函数的第二个参数是一个Class对象，在当前场景下，应该传入需要被启动的Activity类的class对象
                  */
-                intent.putExtra("username", "root");
-                
-                intent.setClass(MainActivity.this,TestActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+//                intent.putExtra("username", "root");
+//                
+//                intent.setClass(MainActivity.this,TestActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+//                startActivity(intent); //启动Activity
+//            }
+//        });
+		
+		/**
+		 * 发送短信
+		 */
+		toSendBtn = findViewById(R.id.toSend);
+		toSendBtn.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View view){
+                //生成一个Intent对象 
+                Intent intent = new Intent();
+                intent.putExtra("to", "18612344321");
+                intent.putExtra("send_body", "Hi I'm Jason!");
+                intent.setClass(MainActivity.this,SmsActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
                 startActivity(intent); //启动Activity
             }
         });
@@ -142,7 +168,7 @@ public class MainActivity extends Activity {
 	
 
 	/**
-	 * onCreateOptionsMenu 
+	 * onCreateOptionsMenu   -- 初始化设置菜单
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -150,6 +176,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	
 	/**
 	 * onOptionsItemSelected 
 	 */
@@ -157,6 +184,19 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			return true;
+		}else if (id == R.id.action_settings_aa) {
+//			toSendBtn = findViewById(id);
+//			toSendBtn.setOnClickListener(new Button.OnClickListener() {
+//				@Override
+//				public void onClick(View v) {
+//					Intent intent = new Intent();
+//	                intent.putExtra("to", "18612344321");
+//	                intent.putExtra("send_body", "Hi I'm Jason!");
+//	                intent.setClass(MainActivity.this,ProfileActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+//	                startActivity(intent); //启动Activity
+//				}
+//			});
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

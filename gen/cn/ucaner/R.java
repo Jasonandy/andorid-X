@@ -11,10 +11,20 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        /**  colorAccent  
+         */
         public static final int colorAccent=0x7f040002;
+        /**  colorPrimary  
+         */
         public static final int colorPrimary=0x7f040000;
+        /**   colorPrimaryDark 
+         */
         public static final int colorPrimaryDark=0x7f040001;
-        public static final int hui=0x7f040003;
+        /**  gray 
+         */
+        public static final int gray=0x7f040003;
+        /**  white  
+         */
         public static final int white=0x7f040004;
     }
     public static final class dimen {
@@ -32,53 +42,74 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_example=0x7f090005;
         public static final int action_settings=0x7f090004;
-        public static final int myBtn=0x7f090001;
-        public static final int mytextView=0x7f090000;
+        public static final int action_settings_a=0x7f090009;
+        public static final int action_settings_aa=0x7f090005;
+        public static final int action_settings_b=0x7f09000a;
+        public static final int action_settings_bb=0x7f090006;
+        public static final int action_settings_c=0x7f09000b;
+        public static final int action_settings_cc=0x7f090007;
+        public static final int action_settings_d=0x7f09000c;
+        public static final int action_settings_dd=0x7f090008;
+        public static final int fun_profile_text=0x7f090001;
         public static final int sendSmsBtn=0x7f090002;
         public static final int test_my_view=0x7f090003;
+        public static final int toSend=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_sms=0x7f030001;
-        public static final int activity_test=0x7f030002;
+        public static final int activity_profile=0x7f030001;
+        public static final int activity_sms=0x7f030002;
+        public static final int activity_test=0x7f030003;
     }
     public static final class menu {
         public static final int global=0x7f080000;
         public static final int main=0x7f080001;
-        public static final int sms=0x7f080002;
-        public static final int test=0x7f080003;
-        public static final int view=0x7f080004;
+        public static final int profile=0x7f080002;
+        public static final int sms=0x7f080003;
+        public static final int test=0x7f080004;
     }
     public static final class string {
         /**  about 关于 
          */
         public static final int aboutText=0x7f060003;
-        public static final int action_example=0x7f060010;
+        public static final int action_example=0x7f060015;
         /**  action_settings 
          */
         public static final int action_settings=0x7f060002;
         /**  app name 
          */
         public static final int app_name=0x7f060000;
+        /**   Click 点击
+         */
         public static final int btn_click=0x7f060004;
-        public static final int down=0x7f060006;
-        public static final int left=0x7f060007;
-        public static final int navigation_drawer_close=0x7f06000f;
-        public static final int navigation_drawer_open=0x7f06000e;
-        public static final int right=0x7f060008;
-        public static final int sms_send=0x7f060013;
-        public static final int space=0x7f060009;
-        public static final int title_activity_sms=0x7f060012;
+        public static final int down=0x7f06000b;
+        public static final int left=0x7f06000c;
+        public static final int navigation_drawer_close=0x7f060014;
+        public static final int navigation_drawer_open=0x7f060013;
+        public static final int right=0x7f06000d;
+        /**  setting  
+         */
+        public static final int setting_about=0x7f060006;
+        public static final int setting_author=0x7f060009;
+        public static final int setting_contact=0x7f060007;
+        public static final int setting_version=0x7f060008;
+        public static final int sms_send=0x7f060018;
+        public static final int space=0x7f06000e;
+        public static final int title_activity_sms=0x7f060017;
         /**   SMS 相关 
          */
-        public static final int title_activity_test=0x7f060011;
-        public static final int title_activity_view=0x7f06000a;
-        public static final int title_section1=0x7f06000b;
-        public static final int title_section2=0x7f06000c;
-        public static final int title_section3=0x7f06000d;
-        public static final int up=0x7f060005;
+        public static final int title_activity_test=0x7f060016;
+        public static final int title_activity_view=0x7f06000f;
+        public static final int title_section1=0x7f060010;
+        public static final int title_section2=0x7f060011;
+        public static final int title_section3=0x7f060012;
+        /**   发送短信 
+         */
+        public static final int to_send=0x7f060005;
+        /**  常见的String 
+         */
+        public static final int up=0x7f06000a;
         /**  You are what you want to be. 
          */
         public static final int yr_wt=0x7f060001;

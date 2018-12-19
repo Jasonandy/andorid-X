@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.ucaner.fun.ProfileActivity" >
+
+    <!-- action_settings  -->
+    <item
+        android:id="@+id/action_settings_a"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/action_settings"
+        android:icon="@color/gray"
+     />
+    
+    <!-- 作者 -->
+     <item
+        android:id="@+id/action_settings_b"
+        android:orderInCategory="2"
+        android:showAsAction="never"
+        android:title="@string/setting_author"
+        android:icon="@color/gray"
+     />
+     
+     <!-- 版本号 -->
+	 <item
+	   android:id="@+id/action_settings_c"
+	   android:orderInCategory="3"
+	   android:showAsAction="never"
+	   android:title="@string/setting_version"
+	   android:icon="@color/gray"
+	/>
+      
+	<!--联系人  -->
+	  <item
+	   android:id="@+id/action_settings_d"
+	   android:orderInCategory="4"
+	   android:showAsAction="never"
+	   android:title="@string/setting_contact"
+	   android:icon="@color/gray"
+	/>
+    
+</menu>

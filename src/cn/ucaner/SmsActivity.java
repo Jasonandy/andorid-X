@@ -37,7 +37,6 @@ public class SmsActivity extends Activity {
 	 */
 	private Button sendSmsBtn = null;
 	
-	
 	/**
 	 * 启动创建
 	 */
@@ -53,7 +52,7 @@ public class SmsActivity extends Activity {
 		sendSmsBtn.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Uri uri = Uri.parse("smsto://0800000123");
+				Uri uri = Uri.parse("smsto:1008601");
 				Intent intent = new Intent(Intent.ACTION_SENDTO,uri);
 				intent.putExtra("sms_body", "I'm Jason! WHAT'S U NAME?");
 				startActivity(intent);

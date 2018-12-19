@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 定义颜色 -->
 <resources>
+    <!-- colorPrimary  -->
     <color name="colorPrimary">#3F51B5</color>
+    <!--  colorPrimaryDark -->
     <color name="colorPrimaryDark">#303F9F</color>
+    <!-- colorAccent  -->
     <color name="colorAccent">#FF4081</color>
-    <color name="hui">#D5D5D5</color>
+    <!-- gray -->
+    <color name="gray">#D5D5D5</color>
+    <!-- white  -->
     <color name="white">#FFFFFF</color>
 </resources>

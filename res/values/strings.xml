@@ -17,7 +17,22 @@
 	        作       者：佛系小吴\n</string>
 	        
     
+    <!--  Click 点击-->
     <string name="btn_click">Click</string>
+    
+    <!--  发送短信 -->
+    <string name="to_send">NOW.SEND.SMS</string>
+    
+    <!-- setting  -->
+	<string name="setting_about">About</string>
+	<string name="setting_contact">联系人</string>
+	<string name="setting_version">版本</string>
+	<string name="setting_author">作者</string>
+	
+	
+    
+    
+    <!-- 常见的String -->
     <string name="up">向上</string>
     <string name="down">向下</string>
     <string name="left">向左</string>
@@ -34,7 +49,7 @@
     
     <!--  SMS 相关 -->
     <string name="title_activity_test">Show</string>
-    <string name="title_activity_sms">SmsActivity</string>
+    <string name="title_activity_sms">短信发送</string>
     
     
     <string name="sms_send">Send SMS</string>

@@ -11,23 +11,28 @@
 
     <!-- 内容  布局文件 一个activity对应一个控件 一般来说   文本控件 
    	 wrap_content
-    
     -->
-    <TextView
+    <!-- <TextView
         android:id="@+id/mytextView"
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content" 
         android:text="@string/aboutText" 
-    />
+    /> -->
     
-    <!-- 按钮 -->
-    <Button 
+    <!-- 测试按钮 -->
+    <!-- <Button 
         android:id="@+id/myBtn"
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
         android:text="@string/btn_click" 
+    /> -->
+    
+     <!-- 发送短信按钮 -->
+    <Button 
+        android:id="@+id/toSend"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:text="@string/to_send" 
     />
-    
-    
 
 </RelativeLayout>
