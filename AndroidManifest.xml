@@ -32,6 +32,7 @@
     <!-- 使用蓝牙权限 <uses-permission android:name="android.permission.BLUETOOTH"  /> -->
     <!-- 修改蓝牙的设置 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
 
+
     <!-- 用户的sdk相关参数 -->
     <uses-sdk
         android:minSdkVersion="23"
@@ -55,11 +56,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-		<!--TestActivity   -->        
+
+        <!-- TestActivity -->
         <activity
             android:name=".TestActivity"
             android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".SmsActivity"
+            android:label="@string/title_activity_sms" >
         </activity>
     </application>
 

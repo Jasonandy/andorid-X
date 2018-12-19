@@ -12,60 +12,59 @@ package cn.ucaner;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 /**
 * @Package：cn.ucaner   
-* @ClassName：TestActivity   
-* @Description：   <p> TestActivity </p>
+* @ClassName：SmsActivity   
+* @Description：   <p> SmsActivity - 调用手机发短信的activity </p>
 * @Author： - Jason   
-* @CreatTime：2018年12月15日 下午8:29:55   
+* @CreatTime：2018年12月19日 下午3:09:13   
 * @Modify By：   
-* @ModifyTime：  2018年12月15日
+* @ModifyTime：  2018年12月19日
 * @Modify marker：   
 * @version    V1.0
  */
-public class TestActivity extends Activity {
-	
-	/**
-	 * 文本框对象
-	 */
-	private TextView textView = null;
-	
-	/**
-	 * intent 传递的对象
-	 */
-	private Intent intent = null;
+public class SmsActivity extends Activity {
 
+	/**
+	 *发送按钮
+	 */
+	private Button sendSmsBtn = null;
+	
+	
+	/**
+	 * 启动创建
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_test);
-		textView = (TextView)findViewById(R.id.test_my_view);
-		
-		intent = getIntent();
-		String value = intent.getStringExtra("username");
-		textView.setText(value);
+		setContentView(R.layout.activity_sms);
 		
 		/**
-		 * 设置文字 - 可以用R资源引用
+		 * 发送短信的按钮
 		 */
-//		textView.setText("\r\n" + 
-//				"	        项目简介：一个佛系的高中物理老师的App\\n\r\n" + 
-//				"	        项目地址：https://github.com/Jasonandy \\n\r\n" + 
-//				"	        作       者：佛系小吴\\n"
-//		);
-		
-		//textView.setText(R.string.aboutText);
-		
+		sendSmsBtn = findViewById(R.id.sendSmsBtn);
+		sendSmsBtn.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Uri uri = Uri.parse("smsto://0800000123");
+				Intent intent = new Intent(Intent.ACTION_SENDTO,uri);
+				intent.putExtra("sms_body", "I'm Jason! WHAT'S U NAME?");
+				startActivity(intent);
+			}
+		});
 	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.test, menu);
+		getMenuInflater().inflate(R.menu.sms, menu);
 		return true;
 	}
 

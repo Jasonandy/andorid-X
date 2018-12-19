@@ -32,24 +32,27 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_example=0x7f090004;
-        public static final int action_settings=0x7f090003;
+        public static final int action_example=0x7f090005;
+        public static final int action_settings=0x7f090004;
         public static final int myBtn=0x7f090001;
         public static final int mytextView=0x7f090000;
-        public static final int test_my_view=0x7f090002;
+        public static final int sendSmsBtn=0x7f090002;
+        public static final int test_my_view=0x7f090003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_test=0x7f030001;
+        public static final int activity_sms=0x7f030001;
+        public static final int activity_test=0x7f030002;
     }
     public static final class menu {
         public static final int global=0x7f080000;
         public static final int main=0x7f080001;
-        public static final int test=0x7f080002;
-        public static final int view=0x7f080003;
+        public static final int sms=0x7f080002;
+        public static final int test=0x7f080003;
+        public static final int view=0x7f080004;
     }
     public static final class string {
-        /**  about 
+        /**  about 关于 
          */
         public static final int aboutText=0x7f060003;
         public static final int action_example=0x7f060010;
@@ -65,7 +68,11 @@ public final class R {
         public static final int navigation_drawer_close=0x7f06000f;
         public static final int navigation_drawer_open=0x7f06000e;
         public static final int right=0x7f060008;
+        public static final int sms_send=0x7f060013;
         public static final int space=0x7f060009;
+        public static final int title_activity_sms=0x7f060012;
+        /**   SMS 相关 
+         */
         public static final int title_activity_test=0x7f060011;
         public static final int title_activity_view=0x7f06000a;
         public static final int title_section1=0x7f06000b;

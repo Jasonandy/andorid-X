@@ -11,14 +11,12 @@
 package cn.ucaner;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
 * @Package：cn.ucaner   
@@ -43,33 +41,33 @@ public class MainActivity extends Activity {
 	/**
 	 * 显示按钮
 	 */
-	private Button viewButton = null;
+	//private Button viewButton = null;
 	
 	/**
 	 * 退出按钮
 	 */
-    private Button exitButton = null;
+    //private Button exitButton = null;
     
     
     /**
      * 离线地图按钮
      */
-    private Button offlineMap = null;
+    //private Button offlineMap = null;
     
     /**
      * 文本
      */
-    private Context mContext;
+    //private Context mContext;
     
     /**
      * 清除缓存
      */
-    private Button clearCache = null;
+    //private Button clearCache = null;
     
     /**
      * 网络设置
      */
-    private Button netSetting = null;
+    //private Button netSetting = null;
     
     
 
@@ -82,7 +80,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main); //activity_main 设置布局文件
 		 
 		//得到一个“控件”
-		TextView myTextView = (TextView)findViewById(R.id.mytextView);
+		//TextView myTextView = (TextView)findViewById(R.id.mytextView);
 		Button myBtn = findViewById(R.id.myBtn);
 		
 		//myTextView.setText("You are what you want to be .");
@@ -90,14 +88,53 @@ public class MainActivity extends Activity {
 		
 		
 		/**
-		 * 点击btn作出相应的处理
+		 * 点击btn作出相应的处理 - setOnClickListener
 		 */
 		myBtn.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View view){
                 //生成一个Intent对象 
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,TestActivity.class);
-                MainActivity.this.startActivity(intent); //启动Activity
+                /**
+                 * http://www.cnblogs.com/engine1984/p/4146621.html
+                 * 
+                 * Android中提供了Intent机制来协助应用间的交互与通讯，或者采用更准确的说法是，Intent不仅可用于应用程序之间，
+                 * 		也可用于应用程序内部的activity, service和broadcast receiver之间的交互。Intent这个英语单词的本意是“目的、意向、意图”
+                 * 
+                 * Intent是一种运行时绑定（runtime binding)机制，它能在程序运行的过程中连接两个不同的组件。
+                 * 		通过Intent，你的程序可以向Android表达某种请求或者意愿，Android会根据意愿的内容选择适当的组件来响应。
+                 * 
+                 * activity、service和broadcast receiver之间是通过Intent进行通信的，而另外一个组件Content Provider本身就是一种通信机制，不需要通过Intent.
+                 * 
+                 * 		如果Activity1需要和Activity2进行联系，二者不需要直接联系，而是通过Intent作为桥梁。通俗来讲，Intnet类似于中介、媒婆的角色。
+                 * -------------------------------------------------------------------------------------------------------------------------
+                 * 1.使用Context.startActivity() 或 Activity.startActivityForResult()，传入一个intent来启动一个activity
+                 * 		使用 Activity.setResult()，传入一个intent来从activity中返回结果。
+                 * 2.将intent对象传给Context.startService()来启动一个service或者传消息给一个运行的service。
+                 * 		将intent对象传给 Context.bindService()来绑定一个service。
+                 * 3.将intent对象传给 Context.sendBroadcast()，Context.sendOrderedBroadcast()
+                 * 		或者Context.sendStickyBroadcast()等广播方法，则它们被传给 broadcast receiver
+                 * --------------------------------------------------------------------------------------------------------------------------
+                 * Intent由以下各个组成部分：
+				 * component(组件)：目的组件
+				 * action（动作）：用来表现意图的行动
+				 * category（类别）：用来表现动作的类别
+				 * data（数据）：表示与动作要操纵的数据
+				 * type（数据类型）：对于data范例的描写
+				 * extras（扩展信息）：扩展信息
+				 * Flags（标志位）：期望这个意图的运行模式
+                 * 
+                 * 
+                 */
+                
+                /**
+                 * 1.setClass函数的第一个参数是一个Context对象
+                 * 2.Context是一个类，Activity是Context类的子类，也就是说，所有的Activity对象，都可以向上转型为Context对象
+                 * setClass函数的第二个参数是一个Class对象，在当前场景下，应该传入需要被启动的Activity类的class对象
+                 */
+                intent.putExtra("username", "root");
+                
+                intent.setClass(MainActivity.this,TestActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+                startActivity(intent); //启动Activity
             }
         });
 		

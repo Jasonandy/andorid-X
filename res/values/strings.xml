@@ -10,19 +10,19 @@
     <!-- action_settings -->
     <string name="action_settings">设置</string>
 
-    <!-- about -->
+    <!-- about 关于 -->
     <string name="aboutText">\n
 	        项目简介：一个佛系的高中物理老师的App\n
 	        项目地址：https://github.com/Jasonandy \n
 	        作       者：佛系小吴\n</string>
 	        
+    
     <string name="btn_click">Click</string>
     <string name="up">向上</string>
     <string name="down">向下</string>
     <string name="left">向左</string>
     <string name="right">向右</string>
     <string name="space"></string>
-    
     <string name="title_activity_view">ViewActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -30,7 +30,13 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
-    <string name="title_activity_test">Show</string>
     
+    
+    <!--  SMS 相关 -->
+    <string name="title_activity_test">Show</string>
+    <string name="title_activity_sms">SmsActivity</string>
+    
+    
+    <string name="sms_send">Send SMS</string>
 
 </resources>
