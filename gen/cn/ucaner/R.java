@@ -26,9 +26,20 @@ public final class R {
         /**   colorPrimaryDark 
          */
         public static final int colorPrimaryDark=0x7f050001;
+        /**  微信整体布局格式  
+ 淡灰 
+         */
+        public static final int dangrey=0x7f050005;
         /**  gray 
          */
         public static final int gray=0x7f050003;
+        /**  绿色 
+         */
+        public static final int green=0x7f050008;
+        /**  灰色 
+         */
+        public static final int grey=0x7f050006;
+        public static final int grey2=0x7f050007;
         /**  white  
          */
         public static final int white=0x7f050004;
@@ -53,6 +64,7 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int sendmessage=0x7f020001;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0009;
@@ -103,6 +115,7 @@ public final class R {
         /**  app name 
          */
         public static final int app_name=0x7f070002;
+        public static final int aroundperson=0x7f070024;
         /**  Click 点击 
          */
         public static final int btn_click=0x7f070006;
@@ -110,17 +123,24 @@ public final class R {
         public static final int error_image_load_fail=0x7f070001;
         public static final int error_news_detail_url_null=0x7f070000;
         public static final int exit=0x7f070011;
+        /**  微信第三面板使用 
+         */
+        public static final int friendcacl=0x7f070021;
+        public static final int game=0x7f070027;
         public static final int hello_world=0x7f07001e;
         public static final int left=0x7f07000e;
         public static final int navigation_drawer_close=0x7f070018;
         public static final int navigation_drawer_open=0x7f070017;
+        public static final int piaoping=0x7f070025;
         public static final int right=0x7f07000f;
+        public static final int saoyisao=0x7f070022;
         /**  setting 
          */
         public static final int setting_about=0x7f070008;
         public static final int setting_author=0x7f07000b;
         public static final int setting_contact=0x7f070009;
         public static final int setting_version=0x7f07000a;
+        public static final int shop=0x7f070026;
         public static final int sms_send=0x7f07001c;
         public static final int space=0x7f070010;
         public static final int sysmblo=0x7f070020;
@@ -142,6 +162,7 @@ public final class R {
         /**  常见的String 
          */
         public static final int up=0x7f07000c;
+        public static final int yaoyiyao=0x7f070023;
         /**  You are what you want to be. 
          */
         public static final int yr_wt=0x7f070003;
@@ -164,5 +185,31 @@ public final class R {
         /**  AppTheme app的主题  
          */
         public static final int AppTheme=0x7f080001;
+        /**  
+        对图片控件的样式设置
+        android:layout_width:设置宽度
+        android:layout_height:设置高度
+        android:background:引入color中的声明为grey的颜色
+        android:layout_gravity:设置当前元素在父元素的位置为水平居中
+    
+         */
+        public static final int imagestyle=0x7f080003;
+        /**  
+        android:layout_width:设置宽度占满父元素
+        android:layout_height:设置高度40dp
+        android:background:引入Android内置白色
+        android:orientation:设置内容水平摆放
+    
+         */
+        public static final int innerstyle=0x7f080004;
+        /**  以下是样式的主要布局代码 
+ 
+        myteststyle样式中声明了要用到的样式
+        android:layout_width:match_parent元素占满父元素
+        android:layout_marginTop顶部外边距15dp
+        android:background:背景色为白色
+     
+         */
+        public static final int myteststyle=0x7f080002;
     }
 }

@@ -26,4 +26,16 @@
     <color name="gray">#D5D5D5</color>
     <!-- white  -->
     <color name="white">#FFFFFF</color>
+    
+    
+    <!-- 微信整体布局格式  -->
+    <!-- 淡灰 -->
+    <color name="dangrey">#CCCCCCCC</color>
+    <!-- 灰色 -->
+    <color name="grey">#999999</color>
+    
+    <color name="grey2">#888888</color>
+    <!-- 绿色 -->
+    <color name="green">#07bb07</color>
+    
 </resources>

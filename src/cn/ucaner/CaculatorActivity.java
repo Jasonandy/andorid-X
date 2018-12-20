@@ -170,4 +170,53 @@ public class CaculatorActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	
+	/**
+	 * 生命周期学习
+	 * 
+	 * 
+	 * 
+	 */
+	/**
+	 * 启动进入的时候加载
+	 */
+	@Override
+	protected void onStart() {
+		//System.out.println("onStart");
+		super.onStart();
+	}
+
+	@Override
+	protected void onRestart() {
+		//System.out.println("onRestart");
+		super.onRestart();
+	}
+
+	/**
+	 * 可以获得用户的焦点的时候调用OnResume
+	 */
+	@Override
+	protected void onResume() {
+		//System.out.println("onResume");
+		super.onResume();
+	}
+	
+	
+	@Override
+	protected void onStop() {
+		//System.out.println("onStop");
+		super.onStop();
+	}
+
+	/**
+	 * 第二个的时候  先onPause 
+	 */
+	@Override 
+	protected void onPause() {
+		super.onPause();
+	}
+	
+	
+	
 }

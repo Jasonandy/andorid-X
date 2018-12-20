@@ -1,13 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2018 [jasonandy@hotmail.com | https://github.com/Jasonandy]
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License”);
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<!-- 
+    第一个线性布局, 我们可以视为html中的div,用于对于整个界面进行布局
+    这里面 xmlns:android和xmlns:tools指定的是xml文件的命名空间,不是对布局的主要设置
+    但是要有
+    	android:layout_width="match_parent"指的是当前的线性布局宽度占整个父元素，这里相对于
+    当前的线性布局父元素为当前的窗体,所以宽度占满窗体
+    	android:layout_height="match_parent"指的是当前的线性布局高度占整个父元素，这里相对于
+    当前的线性布局父元素为当前的窗体,所以高度占满窗体
+    	tools:context="cn.ucaner.CaculatorActivity":用于指定渲染上下文
+    	android:orientation="vertical":指的是当前控件为垂直摆放
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:fitsSystemWindows="true"
-	android:gravity="center_horizontal"
-	android:orientation="vertical"
 	tools:context="cn.ucaner.CaculatorActivity" >
-
+	
+    <!--  https://www.cnblogs.com/zzulihao/p/6535746.html  -->
+    <!-- 
+   		 android:orientation="vertical":垂直方向    horizontal":水平方向
+		 android:layout_width="match_parent"
+		 android:layout_height="match_parent"  
+		 
+		 android：orientation 
+		 	 horizon （水平排列) vertical （垂直排列）
+		 	 
+	 	 android：gravity
+	 	  	 top（顶部对齐） 、bottom（底部对齐） 
+	 	  	 left（左对齐） 、right（右对齐） 
+	 	  	 center_vertical（垂直方向居中） 
+	 	  	 fill_vertical（垂直方向填充） 
+	 	  	 center_horizontal（水平方向居中） 
+	 	  	 fill_horizontal（水平方向填充） 
+	 	  	 center（垂直与水平方向都居中） 
+	 	  	 fill （填充）、  clip_vertical（垂直方向裁剪） 
+	 	  	 clip_horizontal（水平方向裁剪） 
+	 	 	 
+		   left|center_vertical  **（| 搭配使用）
+		   
+		 android：baselineAligned
+		 	 该属性设为 false ，将会阻止该布局管理器与它的子元素的基线对齐
+　　	     android：divider
+			设置垂直布局时两个按钮直接的分隔条。
+　　          android：measureWithLargestChild
+			该属性设为 true 时，所有带权重的子元素都会具有最大子元素的最小尺寸
+		
+		android：layout_gravity 指定该子元素在 LinearLayout 中的对其方式
+　　		android：layout_weight　指定该子元素在 LinearLayout 中所占的权重
+			
+		   
+     -->
+     
+    <!--  
+		LinearLayout（线性布局）
+		TableLayout（表格布局）
+		FrameLayout（帧布局）
+		RelativeLayout（相对布局）
+		GridLayout（网格布局）
+		AbsoluteLayout（绝对布局）    
+    -->
     <!-- editText -->
     <EditText 
         android:id="@+id/factorOne"
@@ -36,6 +105,30 @@
          android:id="@+id/cacuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+    />
     
+    <!-- *********************************************************************** -->
+      <!-- 
+        第二个线性布局,这里我们放置在大的线性布局中,作为子布局使用,设置背景颜色为蓝色 
+        这里面android:layout_width="match_parent"指的是宽度占满父元素LinearLayout的宽度
+            android:layout_height="100dp"高度占100dp
+            android:background="@android:color/holo_blue_bright"设置背景色
+    -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_bright">
+    </LinearLayout>
+    <!-- 
+        第三个线性布局,这里我们放置在大的线性布局中,作为子布局使用,设置背景颜色为绿色
+        这里面android:layout_width="match_parent"指的是宽度占满父元素LinearLayout的宽度
+            android:layout_height="200dp"高度占200dp
+            android:background="@android:color/holo_green_light"设置背景色
+     -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_green_light">
+    </LinearLayout>
+	<!-- *********************************************************************** -->
 </LinearLayout>
