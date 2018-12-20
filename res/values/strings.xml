@@ -36,6 +36,8 @@
 
     <!-- 发送短信 -->
     <string name="to_send">NOW.SEND.SMS</string>
+    <string name="show_tip">SHOW.ME</string>
+    <string name="cacu_tip">CACULATOR</string>
 
     <!-- setting -->
     <string name="setting_about">About</string>

@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
 * @Package：cn.ucaner   
@@ -80,6 +81,16 @@ public class MainActivity extends Activity {
 	 */
 	private Button toSendBtn = null;
 	
+	/**
+	 * 显示提示按钮
+	 */
+	private Button showMeBtn = null;
+	
+	
+	/**
+	 * 计算按钮
+	 */
+	private Button cacuTipBtn = null;
     
 
 	/**
@@ -160,6 +171,40 @@ public class MainActivity extends Activity {
                 intent.putExtra("to", "18612344321");
                 intent.putExtra("send_body", "Hi I'm Jason!");
                 intent.setClass(MainActivity.this,SmsActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+                startActivity(intent); //启动Activity
+            }
+        });
+		
+		/**
+		 * 显示按钮
+		 */
+		showMeBtn = findViewById(R.id.showTip);
+		showMeBtn.setOnClickListener(new Button.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Toast toast=Toast.makeText(getApplicationContext(), "I'M JASON!", Toast.LENGTH_SHORT); 
+				//第一个参数：设置toast在屏幕中显示的位置。我现在的设置是居中靠顶 
+				//第二个参数：相对于第一个参数设置toast位置的横向X轴的偏移量，正数向右偏移，负数向左偏移 
+				//第三个参数：同的第二个参数道理一样 
+				//如果你设置的偏移量超过了屏幕的范围，toast将在屏幕内靠近超出的那个边界显示 
+				//toast.setGravity(Gravity.TOP|Gravity.CENTER, -50, 100); 
+				//屏幕居中显示 X轴和Y轴偏移量都是0 
+				//toast.setGravity(Gravity.CENTER, 0, 0); 
+				toast.show();
+			}
+			
+		});
+		
+		//cacuTipBtn
+		cacuTipBtn = findViewById(R.id.cacu_tip);
+		cacuTipBtn.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View view){
+                //生成一个Intent对象 
+                Intent intent = new Intent();
+                intent.putExtra("to", "18612344321");
+                intent.putExtra("send_body", "Hi I'm Jason!");
+                intent.setClass(MainActivity.this,CaculatorActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
                 startActivity(intent); //启动Activity
             }
         });

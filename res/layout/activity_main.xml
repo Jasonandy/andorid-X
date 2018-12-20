@@ -48,13 +48,6 @@
         android:text="@string/btn_click" 
     /> -->
     
-     <!-- 发送短信按钮 -->
-    <Button 
-        android:id="@+id/toSend"
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content"
-        android:text="@string/to_send" 
-    />
     <!-- 
         第一个线性布局
         style="@style/myteststyle" 引入了我们声明的一个样式
@@ -258,5 +251,40 @@
                 android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
+    
+    <LinearLayout  
+        style="@style/myteststyle"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+     <!-- 发送短信按钮 -->
+	    <Button 
+	        android:id="@+id/toSend"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="@string/to_send" 
+	    />
+      </LinearLayout>
+       <LinearLayout  
+        style="@style/myteststyle"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+     	<!-- 显示按钮-->
+	    <Button 
+	        android:id="@+id/showTip"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="@string/show_tip" 
+	    />
+	    <!-- 计算器-->
+	    <Button 
+	        android:id="@+id/cacu_tip"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="@string/cacu_tip" 
+	    />
+      </LinearLayout>
     
 </LinearLayout>

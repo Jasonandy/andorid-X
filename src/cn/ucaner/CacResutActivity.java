@@ -57,12 +57,18 @@ public class CacResutActivity extends Activity {
 		
 	}
 
+	/**
+	 * 创建的时候的初始化菜单选项
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.cac_resut, menu);
 		return true;
 	}
 
+	/**
+	 * 获取选择后的菜单按钮  -- 作出相应的业务逻辑操作
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();

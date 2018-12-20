@@ -67,23 +67,25 @@ public final class R {
         public static final int sendmessage=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0009;
-        public static final int action_settings_a=0x7f0a000e;
-        public static final int action_settings_aa=0x7f0a000a;
-        public static final int action_settings_b=0x7f0a000f;
-        public static final int action_settings_bb=0x7f0a000b;
-        public static final int action_settings_c=0x7f0a0010;
-        public static final int action_settings_cc=0x7f0a000c;
-        public static final int action_settings_d=0x7f0a0011;
-        public static final int action_settings_dd=0x7f0a000d;
+        public static final int action_settings=0x7f0a000b;
+        public static final int action_settings_a=0x7f0a0010;
+        public static final int action_settings_aa=0x7f0a000c;
+        public static final int action_settings_b=0x7f0a0011;
+        public static final int action_settings_bb=0x7f0a000d;
+        public static final int action_settings_c=0x7f0a0012;
+        public static final int action_settings_cc=0x7f0a000e;
+        public static final int action_settings_d=0x7f0a0013;
+        public static final int action_settings_dd=0x7f0a000f;
         public static final int cacResult=0x7f0a0000;
         public static final int cacuBtn=0x7f0a0004;
+        public static final int cacu_tip=0x7f0a0007;
         public static final int factorOne=0x7f0a0001;
         public static final int factorTwo=0x7f0a0003;
-        public static final int fun_profile_text=0x7f0a0006;
-        public static final int sendSmsBtn=0x7f0a0007;
+        public static final int fun_profile_text=0x7f0a0008;
+        public static final int sendSmsBtn=0x7f0a0009;
+        public static final int showTip=0x7f0a0006;
         public static final int symblo=0x7f0a0002;
-        public static final int test_my_view=0x7f0a0008;
+        public static final int test_my_view=0x7f0a000a;
         public static final int toSend=0x7f0a0005;
     }
     public static final class layout {
@@ -107,62 +109,64 @@ public final class R {
         /**  about 关于 
          */
         public static final int aboutText=0x7f070005;
-        public static final int about_me=0x7f070012;
-        public static final int action_example=0x7f070019;
+        public static final int about_me=0x7f070014;
+        public static final int action_example=0x7f07001b;
         /**  action_settings 
          */
         public static final int action_settings=0x7f070004;
         /**  app name 
          */
         public static final int app_name=0x7f070002;
-        public static final int aroundperson=0x7f070024;
+        public static final int aroundperson=0x7f070026;
         /**  Click 点击 
          */
         public static final int btn_click=0x7f070006;
-        public static final int down=0x7f07000d;
+        public static final int cacu_tip=0x7f070009;
+        public static final int down=0x7f07000f;
         public static final int error_image_load_fail=0x7f070001;
         public static final int error_news_detail_url_null=0x7f070000;
-        public static final int exit=0x7f070011;
+        public static final int exit=0x7f070013;
         /**  微信第三面板使用 
          */
-        public static final int friendcacl=0x7f070021;
-        public static final int game=0x7f070027;
-        public static final int hello_world=0x7f07001e;
-        public static final int left=0x7f07000e;
-        public static final int navigation_drawer_close=0x7f070018;
-        public static final int navigation_drawer_open=0x7f070017;
-        public static final int piaoping=0x7f070025;
-        public static final int right=0x7f07000f;
-        public static final int saoyisao=0x7f070022;
+        public static final int friendcacl=0x7f070023;
+        public static final int game=0x7f070029;
+        public static final int hello_world=0x7f070020;
+        public static final int left=0x7f070010;
+        public static final int navigation_drawer_close=0x7f07001a;
+        public static final int navigation_drawer_open=0x7f070019;
+        public static final int piaoping=0x7f070027;
+        public static final int right=0x7f070011;
+        public static final int saoyisao=0x7f070024;
         /**  setting 
          */
-        public static final int setting_about=0x7f070008;
-        public static final int setting_author=0x7f07000b;
-        public static final int setting_contact=0x7f070009;
-        public static final int setting_version=0x7f07000a;
-        public static final int shop=0x7f070026;
-        public static final int sms_send=0x7f07001c;
-        public static final int space=0x7f070010;
-        public static final int sysmblo=0x7f070020;
-        public static final int title_activity_cac_resut=0x7f07001f;
+        public static final int setting_about=0x7f07000a;
+        public static final int setting_author=0x7f07000d;
+        public static final int setting_contact=0x7f07000b;
+        public static final int setting_version=0x7f07000c;
+        public static final int shop=0x7f070028;
+        public static final int show_tip=0x7f070008;
+        public static final int sms_send=0x7f07001e;
+        public static final int space=0x7f070012;
+        public static final int sysmblo=0x7f070022;
+        public static final int title_activity_cac_resut=0x7f070021;
         /**  计算相关 
          */
-        public static final int title_activity_caculator=0x7f07001d;
-        public static final int title_activity_sms=0x7f07001b;
+        public static final int title_activity_caculator=0x7f07001f;
+        public static final int title_activity_sms=0x7f07001d;
         /**  SMS 相关 
          */
-        public static final int title_activity_test=0x7f07001a;
-        public static final int title_activity_view=0x7f070013;
-        public static final int title_section1=0x7f070014;
-        public static final int title_section2=0x7f070015;
-        public static final int title_section3=0x7f070016;
+        public static final int title_activity_test=0x7f07001c;
+        public static final int title_activity_view=0x7f070015;
+        public static final int title_section1=0x7f070016;
+        public static final int title_section2=0x7f070017;
+        public static final int title_section3=0x7f070018;
         /**  发送短信 
          */
         public static final int to_send=0x7f070007;
         /**  常见的String 
          */
-        public static final int up=0x7f07000c;
-        public static final int yaoyiyao=0x7f070023;
+        public static final int up=0x7f07000e;
+        public static final int yaoyiyao=0x7f070025;
         /**  You are what you want to be. 
          */
         public static final int yr_wt=0x7f070003;

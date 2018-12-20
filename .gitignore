@@ -1,4 +1,6 @@
+#ignored by Jason
 .settings
 .classpath
 .project
 /bin
+/.gradle/
