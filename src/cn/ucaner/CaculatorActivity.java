@@ -11,6 +11,7 @@
 package cn.ucaner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -98,6 +99,9 @@ public class CaculatorActivity extends Activity {
 		sysmblo.setText(R.string.sysmblo);
 		cacuBtn.setText("计算");
 		
+		//将监听器绑定到按钮对象上面
+		cacuBtn.setOnClickListener(new CaculatorListener());
+		
 	}
 	
 
@@ -117,6 +121,18 @@ public class CaculatorActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
+			//1.取得两个EditText控件的值
+			String factorOneStr = factoryOne.getText().toString();
+			String factorTwoStr = factoryTwo.getText().toString();
+			
+			//2.将这两个值放到intent对象里面
+			Intent intent = new Intent();
+			intent.putExtra("one", factorOneStr);
+			intent.putExtra("two", factorTwoStr);
+			
+			//3.使用这个intent对象启动ReslutActivity
+			intent.setClass(CaculatorActivity.this, CacResutActivity.class);
+			startActivity(intent);
 			
 			
 		}
@@ -125,21 +141,32 @@ public class CaculatorActivity extends Activity {
 	}
 	/**
 	 * 启动的时候创建选项菜单 
+	 * 
+	 * 当用户点击MENU按钮的时候  调用此时的方法
+	 * 
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.caculator, menu);
-		return true;
+		menu.add(0, 1, 1, R.string.exit);
+		menu.add(0, 2, 2, R.string.about_me);
+		//getMenuInflater().inflate(R.menu.caculator, menu);
+		return super.onCreateOptionsMenu(menu);
 	}
 
 	/**
-	 * 设置操作按钮的属性值
+	 * 设置操作按钮的属性值  -- 根据点击来作出相应的处理
+	 * 
+	 * 点击菜单的某一个选项时 会调用该方法 
+	 * 
+	 * 根据判断来做出相应的操作
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
+		int id = item.getItemId();//menu 对应的id
 		if (id == R.id.action_settings) {
 			return true;
+		}else if (id == 1) {
+			finish();//结束应用程序
 		}
 		return super.onOptionsItemSelected(item);
 	}

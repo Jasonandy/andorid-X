@@ -11,9 +11,11 @@
 package cn.ucaner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 /**
 * @Package：cn.ucaner   
@@ -28,10 +30,31 @@ import android.view.MenuItem;
  */
 public class CacResutActivity extends Activity {
 
+	/**
+	 * 显示结果
+	 */
+	private TextView cacResult;
+	
+	/**
+	 * 将计算结果返回出来
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cac_resut);
+		//1.首先接受从caculator里面传递过来的两个数据
+		cacResult = findViewById(R.id.cacResult);
+		//得到intent对象
+		Intent intent = getIntent();
+		String factoryOne = intent.getStringExtra("one");
+		String factoryTwo = intent.getStringExtra("two");
+		//2.计算两个值的乘积
+		Integer one = Integer.parseInt(factoryOne);
+		Integer two = Integer.parseInt(factoryTwo);
+		Integer reslutNum = one*two;
+		//3.将计算后的结果显示出来
+		cacResult.setText(reslutNum+"");
+		
 	}
 
 	@Override

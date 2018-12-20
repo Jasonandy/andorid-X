@@ -34,6 +34,10 @@
     <string name="left">向左</string>
     <string name="right">向右</string>
     <string name="space"></string>
+    
+    <string name="exit">退出</string>
+    <string name="about_me">关于</string>
+    
     <string name="title_activity_view">ViewActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -50,7 +54,7 @@
     <!-- 计算相关 -->
     <string name="title_activity_caculator">简易计算器</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_cac_resut">CacResutActivity</string>
+    <string name="title_activity_cac_resut">计算结果</string>
     <string name="sysmblo">乘以</string>
     
     
