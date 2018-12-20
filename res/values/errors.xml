@@ -15,13 +15,6 @@
   ~ limitations under the License.
 -->
 <resources>
-
-    <!--  AppBaseTheme 基本的主题风格-->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-    </style>
-
-    <!-- AppTheme app的主题  -->
-    <style name="AppTheme" parent="AppBaseTheme">
-    </style>
-
+    <string name="error_news_detail_url_null">Failed to fetch news url</string>
+    <string name="error_image_load_fail">Failed to download the picture</string>
 </resources>

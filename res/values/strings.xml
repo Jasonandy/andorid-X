@@ -15,23 +15,19 @@
 	        项目简介：一个佛系的高中物理老师的App\n
 	        项目地址：https://github.com/Jasonandy \n
 	        作       者：佛系小吴\n</string>
-	        
-    
-    <!--  Click 点击-->
+
+    <!-- Click 点击 -->
     <string name="btn_click">Click</string>
-    
-    <!--  发送短信 -->
+
+    <!-- 发送短信 -->
     <string name="to_send">NOW.SEND.SMS</string>
-    
-    <!-- setting  -->
-	<string name="setting_about">About</string>
-	<string name="setting_contact">联系人</string>
-	<string name="setting_version">版本</string>
-	<string name="setting_author">作者</string>
-	
-	
-    
-    
+
+    <!-- setting -->
+    <string name="setting_about">About</string>
+    <string name="setting_contact">联系人</string>
+    <string name="setting_version">版本</string>
+    <string name="setting_author">作者</string>
+
     <!-- 常见的String -->
     <string name="up">向上</string>
     <string name="down">向下</string>
@@ -45,13 +41,18 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
-    
-    
-    <!--  SMS 相关 -->
+
+    <!-- SMS 相关 -->
     <string name="title_activity_test">Show</string>
     <string name="title_activity_sms">短信发送</string>
-    
-    
     <string name="sms_send">Send SMS</string>
+
+    <!-- 计算相关 -->
+    <string name="title_activity_caculator">简易计算器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_cac_resut">CacResutActivity</string>
+    <string name="sysmblo">乘以</string>
+    
+    
 
 </resources>

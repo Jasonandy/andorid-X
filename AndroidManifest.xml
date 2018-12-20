@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="cn.ucaner"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ucaner"
     android:versionCode="1"
-    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    android:versionName="1.0" >
 
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
@@ -24,7 +25,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- SD卡读取权限，用户写入离线定位数据 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--  SD卡读取权限 -->
+    <!-- SD卡读取权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 创建/删除文件的权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
@@ -41,19 +42,15 @@
     <application
         android:allowBackup="true"
         android:banner="@menu/main"
+        android:hasCode="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:hasCode="true">
+        android:theme="@style/AppTheme" >
 
         <!-- MainActivity 主要页面 -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <!-- 将启动类传递过去 设置这里的话 加载启动也就是当前所在的activity -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- TestActivity -->
@@ -61,17 +58,34 @@
             android:name=".TestActivity"
             android:label="@string/title_activity_test" >
         </activity>
-        
+
         <!-- 短信相关测试的activity -->
         <activity
             android:name=".SmsActivity"
             android:label="@string/app_name" >
         </activity>
-        
+
         <!-- profile activity -->
         <activity
             android:name=".fun.ProfileActivity"
             android:label="@string/app_name" >
+        </activity>
+        
+        <!-- CaculatorActivity  -->
+        <activity
+            android:name=".CaculatorActivity"
+            android:label="@string/title_activity_caculator" >
+            <!-- 将启动类传递过去 设置这里的话 加载启动也就是当前所在的activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!--  CacResutActivity -->
+        <activity
+            android:name=".CacResutActivity"
+            android:label="@string/title_activity_cac_resut" >
         </activity>
     </application>
 

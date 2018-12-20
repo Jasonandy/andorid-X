@@ -15,13 +15,11 @@
   ~ limitations under the License.
 -->
 <resources>
-
-    <!--  AppBaseTheme 基本的主题风格-->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-    </style>
-
-    <!-- AppTheme app的主题  -->
-    <style name="AppTheme" parent="AppBaseTheme">
-    </style>
-
+    <dimen name="big_large_text">24sp</dimen>
+    <dimen name="large_text">22sp</dimen>
+    <dimen name="big_medium_text">20sp</dimen>
+    <dimen name="medium_text">18sp</dimen>
+    <dimen name="big_small_text">16sp</dimen>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="micro_text">12sp</dimen>
 </resources>
