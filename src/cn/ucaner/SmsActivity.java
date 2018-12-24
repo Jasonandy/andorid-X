@@ -12,12 +12,15 @@ package cn.ucaner;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+import cc.ibooker.zcountdownviewlib.SingleCountDownView;
 
 /**
 * @Package：cn.ucaner   
@@ -58,6 +61,37 @@ public class SmsActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+
+		/**
+		 * 单个倒计时使用
+		 */
+		SingleCountDownView singleCountDownView = findViewById(R.id.singleCountDownView);
+// 单个倒计时点击事件监听
+		singleCountDownView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				singleCountDownView.setTextColor(Color.parseColor("#FF7198"));
+				//singleCountDownView.setBackgroundResource(R.mipmap.code_border_highlight);
+				// 开启倒计时
+				singleCountDownView.setTime(90)
+						.setTimeColorHex("#FF7198")
+						.setTimePrefixText("前缀")
+						.setTimeSuffixText("后缀")
+						.startCountDown();
+			}
+		});
+
+        // 单个倒计时结束事件监听
+        singleCountDownView.setSingleCountDownEndListener(new SingleCountDownView.SingleCountDownEndListener() {
+            @Override
+            public void onSingleCountDownEnd() {
+                Toast.makeText(SmsActivity.this, "倒计时结束", Toast.LENGTH_SHORT).show();
+                // 倒计时结束
+                singleCountDownView.setText("获取验证码");
+                singleCountDownView.setTextColor(Color.parseColor("#BBBBBB"));
+                //singleCountDownView.setBackgroundResource(R.mipmap.code_border_normal);
+            }
+        });
 	}
 	
 

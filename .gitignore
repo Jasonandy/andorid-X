@@ -1,6 +1,10 @@
-#ignored by Jason
+#ignored by Jason###
 .settings
 .classpath
 .project
-/bin
+#/bin
 /.gradle/
+/build/
+/.idea/
+/appsSpace.iml
+#####################
