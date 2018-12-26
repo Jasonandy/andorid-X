@@ -15,92 +15,100 @@
   ~ limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.ucaner"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- 允许程序读取或写入系统设置 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- SD卡读取权限 -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 创建/删除文件的权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-
-    <!-- 使用蓝牙权限 <uses-permission android:name="android.permission.BLUETOOTH"  /> -->
+          package="cn.ucaner"
+          android:versionCode="1"
+          android:versionName="1.0"> <!-- 使用蓝牙权限 <uses-permission android:name="android.permission.BLUETOOTH"  /> -->
     <!-- 修改蓝牙的设置 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
-
-
     <!-- 用户的sdk相关参数  sdk版本 -->
     <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="23" />
+            android:minSdkVersion="23"
+            android:targetSdkVersion="23"/>
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- SD卡读取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
-        android:allowBackup="true"
-        android:banner="@menu/main"
-        android:hasCode="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+            android:allowBackup="true"
+            android:banner="@menu/main"
+            android:hasCode="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
 
         <!-- MainActivity 主要页面 -->
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+                android:name=".MainActivity"
+                android:label="@string/app_name">
+
             <!-- 将启动类传递过去 设置这里的话 加载启动也就是当前所在的activity -->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <!-- TestActivity -->
         <activity
-            android:name=".TestActivity"
-            android:label="@string/title_activity_test" >
+                android:name=".TestActivity"
+                android:label="@string/title_activity_test">
         </activity>
 
         <!-- 短信相关测试的activity -->
         <activity
-            android:name=".SmsActivity"
-            android:label="@string/app_name" >
+                android:name=".SmsActivity"
+                android:label="@string/app_name">
         </activity>
 
         <!-- profile activity -->
         <activity
-            android:name=".fun.ProfileActivity"
-            android:label="@string/app_name" >
+                android:name=".fun.ProfileActivity"
+                android:label="@string/app_name">
         </activity>
-        
-        <!-- CaculatorActivity  -->
+
+        <!-- CaculatorActivity -->
         <activity
-            android:name=".CaculatorActivity"
-            android:label="@string/title_activity_caculator" >
+                android:name=".CaculatorActivity"
+                android:label="@string/title_activity_caculator">
         </activity>
-        
-        <!--  CacResutActivity -->
+
+        <!-- CacResutActivity -->
         <activity
-            android:name=".CacResutActivity"
-            android:label="@string/title_activity_cac_resut" >
+                android:name=".CacResutActivity"
+                android:label="@string/title_activity_cac_resut">
+        </activity>
+
+        <!-- CoolViewActivity -->
+        <activity
+                android:name=".CoolViewActivity"
+                android:label="@string/title_activity_cool_view">
+        </activity>
+        <activity
+                android:name=".RollingTextActivity"
+                android:label="@string/title_activity_rolling_text">
         </activity>
     </application>
 

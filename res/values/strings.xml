@@ -20,16 +20,17 @@
     <string name="app_name">佛系小吴</string>
 
     <!-- You are what you want to be. -->
-    <string name="yr_wt">You are what you want to be. - wb </string>
+    <string name="yr_wt">You are what you want to be. - wb</string>
 
     <!-- action_settings -->
     <string name="action_settings">设置</string>
 
     <!-- about 关于 -->
     <string name="aboutText">\n
-	        项目简介：一个佛系的高中物理老师的App\n
-	        项目地址：https://github.com/Jasonandy \n
-	        作       者：佛系小吴\n</string>
+        项目简介：一个佛系的高中物理老师的App\n
+        项目地址：https://github.com/Jasonandy \n
+        作 者：佛系小吴\n
+    </string>
 
     <!-- Click 点击 -->
     <string name="btn_click">Click</string>
@@ -51,10 +52,10 @@
     <string name="left">向左</string>
     <string name="right">向右</string>
     <string name="space"></string>
-    
+
     <string name="exit">退出</string>
     <string name="about_me">关于</string>
-    
+
     <string name="title_activity_view">ViewActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -67,14 +68,16 @@
     <string name="title_activity_test">Show</string>
     <string name="title_activity_sms">短信发送</string>
     <string name="sms_send">Send SMS</string>
+    <string name="to_coll_activity">CoolActivity</string>
+    <string name="to_roll_activity">RollActivity</string>
 
     <!-- 计算相关 -->
     <string name="title_activity_caculator">简易计算器</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_cac_resut">计算结果</string>
     <string name="sysmblo">乘以</string>
-    
-    
+
+
     <!-- 微信第三面板使用 -->
     <string name="friendcacl">朋友圈</string>
     <string name="saoyisao">扫一扫</string>
@@ -83,6 +86,8 @@
     <string name="piaoping">漂流瓶</string>
     <string name="shop">购物</string>
     <string name="game">游戏</string>
-    
+    <string name="title_activity_cool_view">CoolViewActivity</string>
+    <string name="title_activity_rolling_text">RollingTextActivity</string>
+
 
 </resources>

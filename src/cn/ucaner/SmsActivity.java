@@ -39,6 +39,17 @@ public class SmsActivity extends Activity {
 	 *发送按钮
 	 */
 	private Button sendSmsBtn = null;
+
+	/**
+	 * CoolActivity
+	 */
+	private Button coolActivityBtn = null;
+
+    /**
+     * rollingTextActivityBtn
+     */
+    private Button rollingTextActivityBtn = null;
+
 	
 	/**
 	 * 启动创建
@@ -46,6 +57,7 @@ public class SmsActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//initViewPager();
 		setContentView(R.layout.activity_sms);
 		
 		/**
@@ -66,7 +78,7 @@ public class SmsActivity extends Activity {
 		 * 单个倒计时使用
 		 */
 		SingleCountDownView singleCountDownView = findViewById(R.id.singleCountDownView);
-// 单个倒计时点击事件监听
+		// 单个倒计时点击事件监听
 		singleCountDownView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -76,7 +88,7 @@ public class SmsActivity extends Activity {
 				singleCountDownView.setTime(90)
 						.setTimeColorHex("#FF7198")
 						.setTimePrefixText("倒计时")
-						.setTimeSuffixText("秒（s）")
+						.setTimeSuffixText("秒(S)")
 						.startCountDown();
 			}
 		});
@@ -90,6 +102,33 @@ public class SmsActivity extends Activity {
                 singleCountDownView.setText("获取验证码");
                 singleCountDownView.setTextColor(Color.parseColor("#BBBBBB"));
                 //singleCountDownView.setBackgroundResource(R.mipmap.code_border_normal);
+            }
+        });
+
+        /**
+         * toRollTextBtn
+         */
+		coolActivityBtn = findViewById(R.id.toCoolBtn);
+		coolActivityBtn.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				//生成一个Intent对象
+				Intent intent = new Intent();
+				intent.setClass(SmsActivity.this,CoolViewActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+				startActivity(intent); //启动Activity
+			}
+		});
+
+
+		//toRollTextBtn
+        rollingTextActivityBtn = findViewById(R.id.toRollTextBtn);
+        rollingTextActivityBtn.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //生成一个Intent对象
+                Intent intent = new Intent();
+                intent.setClass(SmsActivity.this,RollingTextActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+                startActivity(intent); //启动Activity
             }
         });
 	}
@@ -109,4 +148,6 @@ public class SmsActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+
 }
