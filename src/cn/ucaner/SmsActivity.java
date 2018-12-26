@@ -75,8 +75,8 @@ public class SmsActivity extends Activity {
 				// 开启倒计时
 				singleCountDownView.setTime(90)
 						.setTimeColorHex("#FF7198")
-						.setTimePrefixText("前缀")
-						.setTimeSuffixText("后缀")
+						.setTimePrefixText("倒计时")
+						.setTimeSuffixText("秒（s）")
 						.startCountDown();
 			}
 		});
