@@ -14,24 +14,19 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="cn.ucaner.SmsActivity" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:fitsSystemWindows="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              tools:context="cn.ucaner.lifecycle.DialogActivity">
 
-    <!-- action_settings  -->
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="1"
-        android:title="@string/action_settings"
-        android:icon="@color/colorAccent"
-        />
-
-    <!-- action_settings  -->
-    <item
-            android:id="@+id/item_sms_b"
-            android:orderInCategory="2"
-            android:title="@string/app_name"
-            android:icon="@color/colorAccent"
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DialogActivity"
     />
 
-</menu>
+</LinearLayout>

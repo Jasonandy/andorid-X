@@ -70,6 +70,7 @@
     <string name="sms_send">Send SMS</string>
     <string name="to_coll_activity">CoolActivity</string>
     <string name="to_roll_activity">RollActivity</string>
+    <string name="to_destory_activity">销毁活动</string>
 
     <!-- 计算相关 -->
     <string name="title_activity_caculator">简易计算器</string>

@@ -72,5 +72,37 @@
             android:text="@string/to_roll_activity"
     />
 
+    <!-- destoryBtn -->
+    <Button
+            android:id="@+id/destoryActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_destory_activity"
+    />
+
+    <!--browserBtn-->
+    <Button
+            android:id="@+id/browserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="browser"
+    />
+
+    <!--browserBtn-->
+    <Button
+            android:id="@+id/start_normal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SatrtNormal"
+    />
+
+    <!--browserBtn-->
+    <Button
+            android:id="@+id/start_dialog_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StartDialog"
+    />
+
 
 </LinearLayout>

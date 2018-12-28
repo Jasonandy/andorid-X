@@ -33,7 +33,6 @@ import com.yy.mobile.rollingtextview.strategy.Strategy;
  */
 public class RollingTextActivity extends Activity {
 
-
     /**
      * onCreate
      * @param savedInstanceState
@@ -42,8 +41,12 @@ public class RollingTextActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rolling_text);
+
+        /**
+         * rollingTextView 对view做出相关处理
+         */
         final RollingTextView rollingTextView = findViewById(R.id.alphaBetView);
-        rollingTextView.setAnimationDuration(20000L);
+        rollingTextView.setAnimationDuration(2000L);
         //rollingTextView.setCharStrategy(Strategy.CarryBitAnimation);
         rollingTextView.addCharOrder(CharOrder.Alphabet);
         rollingTextView.setAnimationInterpolator(new AccelerateDecelerateInterpolator());

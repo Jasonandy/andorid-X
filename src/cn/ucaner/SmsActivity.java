@@ -15,12 +15,17 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import cc.ibooker.zcountdownviewlib.SingleCountDownView;
+import cn.ucaner.lifecycle.DialogActivity;
+import cn.ucaner.lifecycle.NormalActivity;
 
 /**
 * @Package：cn.ucaner   
@@ -34,6 +39,8 @@ import cc.ibooker.zcountdownviewlib.SingleCountDownView;
 * @version    V1.0
  */
 public class SmsActivity extends Activity {
+
+	public static final String TAG = "SMS_ACTIVITY_TAG";
 
 	/**
 	 *发送按钮
@@ -50,6 +57,26 @@ public class SmsActivity extends Activity {
      */
     private Button rollingTextActivityBtn = null;
 
+	/**
+	 * destoryActivityBtn
+	 */
+	private Button destoryActivityBtn = null;
+
+    /**
+     * browserBtn
+     */
+    private Button browserBtn = null;
+
+
+	/**
+	 * startNormalBtn
+	 */
+	private Button startNormalBtn = null;
+
+	/**
+	 * startDialogBtn
+	 */
+	private Button startDialogBtn = null;
 	
 	/**
 	 * 启动创建
@@ -59,6 +86,7 @@ public class SmsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		//initViewPager();
 		setContentView(R.layout.activity_sms);
+		Log.d(TAG,"onCreate");
 		
 		/**
 		 * 发送短信的按钮
@@ -131,6 +159,50 @@ public class SmsActivity extends Activity {
                 startActivity(intent); //启动Activity
             }
         });
+
+        //destoryActivityBtn
+		destoryActivityBtn = findViewById(R.id.destoryActivityBtn);
+		destoryActivityBtn.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+			}
+		});
+
+		//browserBtn
+        browserBtn = findViewById(R.id.browserBtn);
+        browserBtn.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.baidu.com"));
+                startActivity(intent);
+            }
+        });
+
+        //start_dialog_btn
+
+		startNormalBtn = findViewById(R.id.start_normal_btn);
+		startNormalBtn.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent();
+				intent.setClass(SmsActivity.this,NormalActivity.class);
+				startActivity(intent);
+
+			}
+		});
+
+
+		startDialogBtn = findViewById(R.id.start_dialog_btn);
+		startDialogBtn.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent();
+				intent.setClass(SmsActivity.this,DialogActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 	
 
@@ -140,14 +212,75 @@ public class SmsActivity extends Activity {
 		return true;
 	}
 
+	/**
+	 * 设置
+	 * @param item
+	 * @return
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch (item.getItemId()){
+			case R.id.action_settings:
+				Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
+			case R.id.item_sms_b:
+				Toast.makeText(this,"This is App Name.",Toast.LENGTH_SHORT).show();
+			break;
+			default:
 		}
-		return super.onOptionsItemSelected(item);
+		return true;
 	}
 
+	/**
+	 * onPause
+	 */
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.d(TAG,"onPause");
+	}
 
+	/**
+	 * onStart
+	 */
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Log.d(TAG,"onStart");
+	}
+
+	/**
+	 * onRestart
+	 */
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		Log.d(TAG,"onRestart");
+	}
+
+	/**
+	 * onResume
+	 */
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.d(TAG,"onResume");
+	}
+
+	/**
+	 * onStop
+	 */
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Log.d(TAG,"onStop");
+	}
+
+	/**
+	 * onDestroy
+	 */
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.d(TAG,"onDestroy");
+	}
 }

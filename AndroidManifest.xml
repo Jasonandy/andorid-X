@@ -57,17 +57,16 @@
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+        1
 
         <!-- MainActivity 主要页面 -->
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name">
-
-            <!-- 将启动类传递过去 设置这里的话 加载启动也就是当前所在的activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
@@ -106,9 +105,24 @@
                 android:name=".CoolViewActivity"
                 android:label="@string/title_activity_cool_view">
         </activity>
+
+        <!--RollingTextActivity-->
         <activity
                 android:name=".RollingTextActivity"
                 android:label="@string/title_activity_rolling_text">
+        </activity>
+
+        <!--  NormalActivity -->
+        <activity android:name=".lifecycle.NormalActivity"
+                  android:label="NORMAL"
+        >
+        </activity>
+
+        <!-- DialogActivity -->
+        <activity android:name=".lifecycle.DialogActivity"
+                  android:label="DAILOG"
+                  android:theme="@style/Theme.AppCompat.Dialog"
+        >
         </activity>
     </application>
 
