@@ -15,20 +15,19 @@
   ~ limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.ucaner"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.ucaner"
           android:versionCode="1"
           android:versionName="1.0"> <!-- 使用蓝牙权限 <uses-permission android:name="android.permission.BLUETOOTH"  /> -->
     <!-- 修改蓝牙的设置 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
     <!-- 用户的sdk相关参数  sdk版本 -->
-    <uses-sdk
-            android:minSdkVersion="23"
-            android:targetSdkVersion="23"/>
+    <!--<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26" android:maxSdkVersion="28"/>-->
 
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
     <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!-- 允许程序读取或写入系统设置 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 这个权限用于访问GPS定位 -->
@@ -48,7 +47,7 @@
     <!-- SD卡读取权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!-- 创建/删除文件的权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" tools:ignore="ProtectedPermissions" />
 
     <application
             android:allowBackup="true"

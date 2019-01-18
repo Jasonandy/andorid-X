@@ -15,9 +15,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -181,7 +179,9 @@ public class SmsActivity extends Activity {
         });
 
         //start_dialog_btn
-
+		/**
+		 * startNormalBtn
+		 */
 		startNormalBtn = findViewById(R.id.start_normal_btn);
 		startNormalBtn.setOnClickListener(new Button.OnClickListener() {
 			@Override
@@ -193,7 +193,9 @@ public class SmsActivity extends Activity {
 			}
 		});
 
-
+		/**
+		 * startDialogBtn
+		 */
 		startDialogBtn = findViewById(R.id.start_dialog_btn);
 		startDialogBtn.setOnClickListener(new Button.OnClickListener() {
 			@Override

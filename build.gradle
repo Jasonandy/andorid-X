@@ -1,3 +1,5 @@
+apply plugin: 'com.android.application'//说明module的类型，com.android.application为程序，com.android.library为库
+
 buildscript {
     repositories {
         maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
@@ -6,22 +8,22 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.2.0'
     }
 }
-apply plugin: 'com.android.application'
 
-dependencies {
-    implementation fileTree(include: '*.jar', dir: 'libs')
-    implementation 'com.github.zrunker:ZCountDownView:v1.1'
-    implementation 'com.huanhailiuxin.view:coolviewpager:1.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    implementation 'com.github.YvesCheung:RollingText:1.2.0'
-}
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 26 //编译的SDK版本
+    buildToolsVersion '28.0.2'
+
+    defaultConfig{
+        applicationId "cn.ucaner"//应用程序的包名
+        minSdkVersion 15//支持的目标版本
+        targetSdkVersion 26//支持的目标版本
+        versionCode 52//版本号
+        versionName "3.0.1"//版本名
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -33,20 +35,58 @@ android {
         abortOnError false
     }
 
-    sourceSets {
+    sourceSets {//目录指向配置
         main {
-            manifest.srcFile 'AndroidManifest.xml'
+            manifest.srcFile 'AndroidManifest.xml' //指定AndroidManifest文件
             java.srcDirs = ['src']
             resources.srcDirs = ['src']
             aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
-            jniLibs.srcDirs = ['libs']
+            renderscript.srcDirs = ['src'] //指定source目录
+            res.srcDirs = ['res'] //指定资源目录
+            assets.srcDirs = ['assets'] //指定assets目录
+            jniLibs.srcDirs = ['libs'] //指定lib库目录
         }
-        debug.setRoot('build-types/debug')
-        release.setRoot('build-types/release')
+        debug.setRoot('build-types/debug') //指定debug模式的路径
+        release.setRoot('build-types/release') //指定release模式的路径
     }
+
+//    signingConfigs{//签名配置
+//        release{//发布版签名配置
+//            storeFile file("apps.keystore")//密钥文件路径
+//            storePassword "123456"//密钥文件密码
+//            keyAlias "jason"//key别名
+//            keyPassword "123456"//key密码
+//        }
+//        debug{//发布版签名配置
+//            storeFile file("apps.keystore")//密钥文件路径
+//            storePassword "123456"//密钥文件密码
+//            keyAlias "jason"//key别名
+//            keyPassword "123456"//key密码
+//        }
+//    }
+
+//    buildType{//build类型
+//        release{//发布
+//            minifyEnabled true//混淆开启
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'),'proguard-project.txt'//指定混淆规则文件
+//            signingConfig signingConfigs.release//设置签名信息
+//        }
+//        release{//调试
+//            signingConfig signingConfigs.release//设置签名信息
+//        }
+//
+//    }
+//    packagingOptions{//设置打包后的apk里的META-INF移除指定的文件
+//        exclude 'META-INF/ASL2.0'
+//        exclude 'META-INF/LICENSE'
+//        exclude 'META-INF/NOTICE'
+//        exclude 'META-INF/MANIFEST.MF'
+//    }
+//    lintOptions{//lint的相关配置
+//        abortOnError false//lint时候终止错误上报，防止编译的时候莫名的失败
+//    }
+
+
 }
 
 repositories {
@@ -54,4 +94,13 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
     maven { url 'https://jitpack.io' }
     google()
+}
+
+
+dependencies {
+    implementation fileTree(dir:'libs',exclude:['android-support*.jar'],include:['*.jar'])//编译lib目录下的.jar文件
+    implementation 'com.github.zrunker:ZCountDownView:v1.1'
+    implementation 'com.huanhailiuxin.view:coolviewpager:1.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.github.YvesCheung:RollingText:1.2.0'
 }
