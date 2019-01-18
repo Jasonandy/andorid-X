@@ -264,8 +264,16 @@
 	        android:layout_gravity="center_horizontal"
 	        android:text="@string/to_send" 
 	    />
+        <Button
+            android:id="@+id/showWebView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="BROSWER"
+            />
       </LinearLayout>
-       <LinearLayout  
+
+    <LinearLayout
         style="@style/myteststyle"
         android:layout_height="40dp"
         android:orientation="horizontal" >
@@ -285,6 +293,19 @@
 	        android:layout_gravity="center_horizontal"
 	        android:text="@string/cacu_tip" 
 	    />
-      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/myteststyle"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+        <!-- NOTIFY -->
+        <Button
+            android:id="@+id/noticSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="NOTIFY" />
+    </LinearLayout>
     
 </LinearLayout>

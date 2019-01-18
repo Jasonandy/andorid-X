@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import cn.ucaner.web.WebActivity;
+
 /**
 * @Package：cn.ucaner   
 * @ClassName：MainActivity   
@@ -80,6 +82,11 @@ public class MainActivity extends Activity {
 	 * 发送sms按钮
 	 */
 	private Button toSendBtn = null;
+
+	/**
+	 * 测试webView 网页浏览
+	 */
+	private Button toWebViewBtn = null;
 	
 	/**
 	 * 显示提示按钮
@@ -159,6 +166,22 @@ public class MainActivity extends Activity {
 //                startActivity(intent); //启动Activity
 //            }
 //        });
+
+
+		/**
+		 * toWebViewBtn
+		 */
+		toWebViewBtn = findViewById(R.id.toSend);
+		toWebViewBtn.setOnClickListener(new Button.OnClickListener(){
+			public void onClick(View view){
+				//生成一个Intent对象
+				Intent intent = new Intent();
+				intent.putExtra("to", "18612344321");
+				intent.putExtra("send_body", "Hi I'm Jason!");
+				intent.setClass(MainActivity.this,WebActivity.class); //ComponentName 内部其实就是传递到Component了 MainActivity--->TestActivity
+				startActivity(intent); //启动Activity
+			}
+		});
 		
 		/**
 		 * 发送短信
